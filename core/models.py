@@ -10,4 +10,4 @@ class TaskModel(models.Model):
         ('M', 'Medium'),
         ('H', 'High'),
     )
-    priority = models.CharField(choices=PRIORITY, default='M')
+    priority = models.CharField(max_length=1, choices=PRIORITY, default='M')
