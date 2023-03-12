@@ -3,6 +3,7 @@ from rest_framework.generics import get_object_or_404
 from rest_framework.response import Response
 from rest_framework.serializers import ModelSerializer
 from rest_framework.views import APIView
+from django.views.decorators.csrf import csrf_exempt
 
 from core.models import TaskModel
 
@@ -15,6 +16,7 @@ class TaskListSerializer(ModelSerializer):
             "name",
             "description",
             "is_done",
+            "priority",
         )
         read_only_fields = ("id",)
 
