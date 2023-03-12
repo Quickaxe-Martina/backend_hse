@@ -10,4 +10,4 @@ class TaskModel(models.Model):
         ('M', 'Medium'),
         ('H', 'High'),
     )
-    priority = models.IntegerField(max_length=1, choices=PRIORITY)
+    priority = models.IntegerField(max_length=1, choices=PRIORITY, default='M')
